@@ -1,0 +1,102 @@
+<div class="e4">
+  <div>
+    <div class="ADDA">
+      <div class="columnbookatabl">
+        <div class="title">
+          <p class="bookatable ui text size-textmd">Book A Table</p>
+          <p class="weconsiderall ui text size-texts">
+            We consider all the drivers of change gives you the components you need to change to create a truly happens.
+          </p>
+        </div>
+        <div class="form">
+          <form [formGroup]="bookingForm" (ngSubmit)="bookTable()">
+            <div class="columndate">
+              <div class="row">
+                <div class="one-1">
+                  <h1 class="ui heading size-headingxs">Date</h1>
+                  <div class="buttonbase_one">
+                    <input formControlName="date" type="date" />
+                  </div>
+                  <div *ngIf="bookingForm.get('date')?.invalid && bookingForm.get('date')?.touched" class="error-message">
+                    Date is required.
+                  </div>
+                </div>
+                <div class="one-1">
+                  <h2 class="ui heading size-headingxs">Time</h2>
+                  <select formControlName="time" class="personcounter">
+                    <option value="" disabled>Select Time</option>
+                    <option value="12:00 PM">12:00 PM (Lunch)</option>
+                    <option value="12:30 PM">12:30 PM</option>
+                    <option value="1:00 PM">1:00 PM</option>
+                    <option value="1:30 PM">1:30 PM</option>
+                    <option value="2:00 PM">2:00 PM</option>
+                    <option value="6:00 PM">6:00 PM (Dinner)</option>
+                    <option value="6:30 PM">6:30 PM</option>
+                    <option value="7:00 PM">7:00 PM</option>
+                    <option value="7:30 PM">7:30 PM</option>
+                    <option value="8:00 PM">8:00 PM</option>
+                    <option value="8:30 PM">8:30 PM</option>
+                    <option value="9:00 PM">9:00 PM</option>
+                  </select>
+                  <div *ngIf="bookingForm.get('time')?.invalid && bookingForm.get('time')?.touched" class="error-message">
+                    Time is required.
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="one-1">
+                  <h3 class="ui heading size-headingxs">Name</h3>
+                  <label class="name">
+                    <input formControlName="name" placeholder="Enter your name" type="text" />
+                  </label>
+                  <div *ngIf="bookingForm.get('name')?.invalid && bookingForm.get('name')?.touched" class="error-message">
+                    Name is required.
+                  </div>
+                </div>
+                <div class="one-1">
+                  <h4 class="ui heading size-headingxs">Phone</h4>
+                  <label class="name">
+                    <input formControlName="phone" placeholder="x-xxx-xxx-xxxx" type="text" />
+                  </label>
+                  <div *ngIf="bookingForm.get('phone')?.invalid && bookingForm.get('phone')?.touched" class="error-message">
+                    Phone number is required.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="columntotalpers">
+              <div class="one">
+                <h5 class="ui heading size-headingxs">Total Person</h5>
+                <select formControlName="totalPerson" class="personcounter">
+                  <option value="" disabled>Select Total Person</option>
+                  <option value="1">1 Person</option>
+                  <option value="2">2 Persons</option>
+                  <option value="3">3 Persons</option> 
+                  <option value="5">4-5 Persons</option> 
+                  <option value="6">6 Persons</option>
+                  <option value="10">7-10 Persons</option> 
+                  <option value="20">11-20 Persons</option>
+                  <option value="50">Private Event</option> 
+                </select>
+                <div *ngIf="bookingForm.get('totalPerson')?.invalid && bookingForm.get('totalPerson')?.touched" class="error-message">
+                  Total person is required.
+                </div>
+              </div>
+              <button type="submit" class="flex-row-center-center book_a_table-1">Book A Table</button>
+            </div>
+          </form>
+          <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+          <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+        </div>
+      </div>
+      <div class="map">
+        <iframe
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="image112_one">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</div>

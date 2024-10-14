@@ -1,0 +1,193 @@
+
+      <div class="e1">
+        <div class="row_two">
+          <div class="rowwereserious">
+            <div class="aa">
+              <h1 class="wereserious ui heading size-headings">
+                <span class="todayspecial-span"> We&#39;re&nbsp;</span>
+                <span class="todayspecial-span-1"> Serious</span>
+                <span class="todayspecial-span"> &nbsp;For&nbsp;</span>
+                <span class="todayspecial-span-1"> Food</span>
+                <span class="todayspecial-span"> &nbsp;&&nbsp;</span>
+                <span class="wereserious-span-5"> Delivery</span>
+                <span class="todayspecial-span"> .</span>
+              </h1>
+              <div class="rowduration">
+                <div class="columnduration">
+                  <p class="duration ui text size-texts">
+                    Best cooks and best delivery guys all at your service. Hot tasty food will reach you in 60 minutes.
+                  </p>
+                  <div class="rowsearch">
+                    <label class="search">
+                      <img src=" ./img_search_white_a700_1.svg" alt="Search" class="search-1" />
+                      <input name="search" placeholder="Search food" type="text" />
+                    </label>
+                    <a href="menu" class="rewind">
+                    <img src=" ./img_rewind.svg" alt="Rewind" class="rewind_one" />
+                  </a>
+                  </div>
+                </div>
+              </div>
+              <img src=" ./img_slider.svg" alt="Slider" class="slider_one" />
+            </div>
+            <div class="stack">
+              <div class="stackview">
+                <div class="rowview">
+                  <div class="view view_border"></div>
+                </div>
+                <div class="columnt4gag1e6f">
+                  <div class="rowt4gag1e6fmeo">
+                    
+                    <div class="rowsettings_one">
+                      <div class="row_one">
+                        <img src=" ./DALL·E 2024-09-19 17.08.13 - A smiling woman holding a slice of pizza in the foreground with various food dishes displayed around her in circular frames. The food includes a salad.webp" alt="Image" class="image_two" />
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columntodayspec">
+          <h2 class="todayspecial ui heading size-headingxs">
+            <span class="todayspecial-span"> Today&nbsp;</span>
+            <span class="todayspecial-span-1"> special offers</span>
+          </h2>
+          <p class="description ui text size-textxs">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry&#39;s standard dummy text ever since the 1500s
+          </p>
+                   
+        </div>
+        
+      <div class="gridprice">
+        <div *ngFor="let product of productsArray; trackBy: trackByFn">
+          <div class="c1">
+            <div class="a01">
+              <div class="a02">
+                <div class="a03 columnprice_border">
+                  <div class="a04">
+                    <img [src]="product.strCategoryThumb" alt="${product.strCategory}"  class="a05"/>
+                  <h2 class="a06 ui heading size-texts">{{product.price}} $</h2>
+                </div>
+              </div>
+              <div class="a07">
+                <div class="a08">
+                  <img src="./img_grid_red_400.png" alt="Image" class="a09" />
+                  <div class="a10">
+                    <img src="./img_star_7.svg" alt="Image" class="a11" />
+                    <h3 class="a12 ui heading size-texts">({{product.rate}})</h3>
+                  </div>
+                </div>
+                <h4 class="a13 ui heading size-headingxs">{{product.strCategory}}</h4>
+                <h5 class="a14 ui heading size-textxs">{{product.strCategoryDescription}}</h5>
+              </div>
+            </div>
+            <input class="cc ui heading size-texts" type="number" [(ngModel)]="product.quantity" min="1" placeholder="Number of orders" />
+            <button class="flex-row-center-center a15" (click)="orderProduct(product)">Order Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+        <div class="columnvectornin">
+          <div class="stackwearemore">
+            <div class="columnwearemore">
+              <h2 class="wearemore ui heading size-headingxs">
+                <span class="todayspecial-span"> We are&nbsp;</span>
+                <span class="todayspecial-span-1"> more</span>
+                <span class="todayspecial-span"> &nbsp;than&nbsp;</span>
+                <span class="wereserious-span-5"> multiple service</span>
+              </h2>
+              <p class="description-1 ui text size-textxs">
+                This is a type of resturent which typically serves food and drink, in addition to light refreshments such
+                as baked goods or snacks. The term comes frome the rench word meaning food
+              </p>
+              <div class="columnabout_us">
+                <div class="column247servic">
+                  <div class="row247service">
+                    <img src=" ./img_image_17.png" alt="Imageseventeen" class="imageseventeen" />
+                    <p class="ui text size-textxs">24/7 Service</p>
+                  </div>
+                  <div class="row247service">
+                    <img src=" ./img_image_18.png" alt="Imageseventeen" class="imageseventeen" />
+                    <p class="ui text size-textxs">Super Chef</p>
+                  </div>
+                  <div class="row247service">
+                    <img src=" ./img_image_18.png" alt="Imageseventeen" class="imageseventeen" />
+                    <p class="ui text size-textxs">Clean Kitchen</p>
+                  </div>
+                </div>
+                  <div class="gridonline">
+                    <div class="rowonline_order">
+                      <img src=" ./img_image_15.png" alt="Online Order" class="imageseventeen" />
+                      <p class="ui text size-textxs">Online Order</p>
+                    </div>
+                    <div class="rowonline_order">
+                      <img src=" ./img_image_18.png" alt="Online Order" class="imageseventeen" />
+                      <p class="ui text size-textxs">Pre-Reservation</p>
+                    </div>
+                    <div class="rowonline_order">
+                      <img src=" ./img_image_18.png" alt="Online Order" class="imageseventeen" />
+                      <p class="ui text size-textxs">Oragonized Foodhut Place</p>
+                    </div>
+                  </div>
+                <a href="About" class="aadad">
+                <button  class="flex-row-center-center about_us">About Us</button>
+              </a>
+              </div>
+            </div>
+            <div class="rowvectornine">
+              <img src=" ./R-removebg-preview (1).png" alt="Image" class="image_four" />
+              <img src=" ./img_vector_9.svg" alt="Vectornine" class="vectornine_one" />
+            </div>
+          </div>
+          <div class="stackfastestfoo">
+            <div class="rowfastestfood">
+              <div class="columnfastestfo">
+                <div class="title">
+                  <h2 class="fastestfood ui heading size-textmd">Fastest Food Delivery in City</h2>
+                  <p class="youmadeitso ui text size-textxs">
+                    Our visual designer lets you quickly and of drag a down your way to customapps for both keep desktop.
+                  </p>
+                </div>
+                <div class="features">
+                  <div class="one">
+                    <div class="icon">
+                      <div class="iconoutline">
+                        <img src=" ./img_search_white_a700_2.svg" alt="Search" class="search_one" />
+                      </div>
+                    </div>
+                    <p class="duration-1 ui text size-texts">Delivery within 30 minutes</p>
+                  </div>
+                  <div class="listbest_offer">
+                    <div class="two">
+                      <div class="icon-1">
+                        <div class="iconoutline">
+                          <img src=" ./img_user_white_a700.svg" alt="Best Offer" class="best_offer" />
+                        </div>
+                      </div>
+                      <p class="duration-1 ui text size-texts">Best Offer & Prices</p>
+                    </div>
+                    <div class="two">
+                      <div class="icon-1">
+                        <div class="iconoutline">
+                          <img src=" ./img_cart_white_a700.svg" alt="Best Offer" class="best_offer" />
+                        </div>
+                      </div>
+                      <p class="duration-1 ui text size-texts">Online Services Available</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img src=" ./img_mid_shot_chef_h.png" alt="Midshotchefh" class="midshotchefh" />
+            <div class="columnsourcurry">
+              <img src=" ./img_sour_curry_with.png" alt="Sourcurrywith" class="sourcurrywith" />
+              <img src=" ./img_sadj_iron_pot_w.png" alt="Sadjironpotw" class="sadjironpotw" />
+            </div>
+          </div>
+        </div>
+      </div>
+  

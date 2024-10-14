@@ -1,0 +1,72 @@
+<div class="e5">
+  <div class="ada">
+    <div class="columnname">
+      <div class="columncontactus">
+        <a>
+          <p class="contactus ui text size-textmd">Contact Us</p>
+        </a>
+        <p class="weconsiderall ui text size-texts">
+          We consider all the drivers of change gives you the components you need to create a truly impactful change.
+        </p>
+      </div>
+      <div class="form">
+        <form [formGroup]="contactForm" (ngSubmit)="fetchData($event)">
+          <div class="row">
+            <div class="one-1">
+              <h1 class="subject ui heading size-headingxs">Name</h1>
+              <label class="buttonbase_one">
+                <input name="Name" placeholder="Enter your name" formControlName="Name" type="text" />
+              </label>
+            </div>
+            <div class="one-1">
+              <h2 class="subject ui heading size-headingxs">Email</h2>
+              <label class="buttonbase_one">
+                <input name="Email" placeholder="Enter email address" formControlName="Email" type="email" />
+              </label>
+            </div>
+          </div>
+          <div class="one container-xs">
+            <h3 class="subject ui heading size-headingxs">Subject</h3>
+            <label class="buttonbase_one">
+              <input name="Subject" placeholder="Write a subject" formControlName="Subject" type="text" />
+            </label>
+          </div>
+          <div class="columnmessage container-xs">
+            <div class="one-2">
+              <h4 class="subject ui heading size-headingxs">Message</h4>
+              <textarea name="Message" placeholder="Write your message" formControlName="Message" class="buttonbase"></textarea>
+            </div>
+            <button type="submit" class="flex-row-center-center send">Send</button>
+          </div>
+        </form>
+
+        <div *ngIf="successMessage" class="success-message">
+          <p>{{ successMessage }}</p>
+        </div>
+
+        <div *ngIf="errorMessage" class="error-message">
+          <p>{{ errorMessage }}</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="rowcallus">
+      <div class="info">
+        <div class="columncallus">
+          <h2 class="callus ui heading size-headings">Call Us:</h2>
+          <h3 class="onehundredsixtymillionsevenhundredfortythreethousandsixhundredeightytwo ui heading size-headingmd">
+            +1-234-567-8900
+          </h3>
+        </div>
+        <div class="time">
+          <h4 class="callus ui heading size-headings">Hours:</h4>
+          <p class="time-1 ui text size-texts">Mon-Fri: 11am - 8pm Sat, Sun: 9am - 10pm</p>
+        </div>
+        <div class="location">
+          <h5 class="callus ui heading size-headings">Our Location:</h5>
+          <p class="class-123bridge ui text size-texts">123 Bridge Street Nowhere Land, LA 12345 United States</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

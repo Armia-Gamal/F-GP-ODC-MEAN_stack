@@ -1,0 +1,44 @@
+<a href="add-category">
+    <button class="flex-row-center-center2 order_now2">Add Category</button>
+  </a>
+  
+  <div class="e3">
+    <div class="newscreenbody">
+      <div class="columnmenuthat">
+        <h1 class="menuthat ui heading size-headings">
+          <span class="menuthat-span">All</span>
+          <span class="menuthat-span-1">&nbsp;Category&nbsp;</span>
+        </h1>
+      </div>
+      <div class="gridprice">
+        <div *ngFor="let product of productsArray; let i = index" class="column_one">
+          <div class="columnorder_now">
+            <div class="column">
+              <div class="columnprice columnprice_border">
+                <div class="stackprice">
+                  <img [src]="product.strCategoryThumb" alt="{{product.strCategory}}" class="image" />
+                  <h2 class="price ui heading size-texts">{{product.price}} $</h2>
+                </div>
+              </div>
+              <div class="columnkebab">
+                <div class="row_one">
+                  <img src="./img_grid_red_400.png" alt="Image" class="image_one" />
+                  <div class="row-1">
+                    <img src="./img_star_7.svg" alt="Image" class="image_two" />
+                    <h3 class="fortyfive ui heading size-texts">({{product.rate}})</h3>
+                  </div>
+                </div>
+                <h4 class="kebab ui heading size-headingxs">{{product.strCategory}}</h4>
+                <h6 class="loremipsumis ui heading size-textxs">{{product.strCategoryDescription}}</h6>
+              </div>
+            </div>
+            <a [routerLink]="['/update-category', product._id]">
+              <button class="flex-row-center-center order_now">Update</button>
+            </a>
+            <button class="flex-row-center-center1 order_now1" (click)="deleteCategory(product._id)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

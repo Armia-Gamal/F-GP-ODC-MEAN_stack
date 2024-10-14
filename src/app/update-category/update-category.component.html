@@ -1,0 +1,55 @@
+<div class="aa">
+    <div class="container">
+        <div class="form-container">
+            <h2>Update Category</h2>
+            <form [formGroup]="updateCategoryForm" (ngSubmit)="onUpdate()">
+                <div class="form-group">
+                    <label for="strCategory">Category Name</label>
+                    <input type="text" id="strCategory" formControlName="strCategory" required>
+                    <div *ngIf="updateCategoryForm.get('strCategory')?.invalid && updateCategoryForm.get('strCategory')?.touched" class="error-message">
+                        Category name is required.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="strCategoryThumb">Category Thumbnail (Optional)</label>
+                    <input type="file" id="strCategoryThumb" (change)="onFileChange($event)" accept="image/*">
+                    <div *ngIf="thumbnailError" class="error-message">{{thumbnailError}}</div>
+                    <div *ngIf="thumbnailPreviewUrl" class="thumbnail-preview">
+                        <img [src]="thumbnailPreviewUrl" alt="Thumbnail Preview" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="strCategoryDescription">Description</label>
+                    <textarea id="strCategoryDescription" formControlName="strCategoryDescription"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="number" id="price" formControlName="price" required>
+                    <div *ngIf="updateCategoryForm.get('price')?.invalid && updateCategoryForm.get('price')?.touched" class="error-message">
+                        Price is required and must be greater than 0.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="rate">Rate</label>
+                    <input type="number" id="rate" formControlName="rate" min="0" max="5" step="0.1">
+                    <div *ngIf="updateCategoryForm.get('rate')?.invalid && updateCategoryForm.get('rate')?.touched" class="error-message">
+                        Rate must be between 0 and 5.
+                    </div>
+                </div>
+                
+                    <button type="submit" [disabled]="updateCategoryForm.invalid || thumbnailError">Update Category</button>
+
+            
+            </form>
+
+            <div *ngIf="successMessage" class="alert alert-success">
+                {{ successMessage }}
+            </div>
+            <div *ngIf="errorMessage" class="alert alert-danger">
+                {{ errorMessage }}
+            </div>
+
+            <p>Need to manage categories? <a href="category-management" class="manage">Manage Categories</a></p>
+        </div>
+    </div>
+</div>

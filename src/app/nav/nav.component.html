@@ -1,0 +1,82 @@
+
+<div class="faf">
+  <div class="top-bar">
+      <div class="div">
+          <div class="social">
+            <img class="element" src="./1.png" herf="#" />
+            <img class="element" src="./2.png" herf="#"/>
+            <img class="element" src="./3.png" herf="#"/>
+            <img class="element" src="./4.png" herf="#"/>
+          </div>
+        </div>  
+        <div class="DADa">  
+        <div  *ngIf="isAdmin">
+          <p class="DADa">U-R-Admin</p>
+        </div>
+          <div class="info">
+            <div class="div-2">
+                <img class="img" src="./phone.png" />
+                <div class="text-wrapper">(414) 857 - 0107</div>
+            </div>
+            <div class="div-2">
+                <img class="img" src="./mail.png" />
+                <div class="text-wrapper">{{ 'R100@resturant.com' }}</div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <header class="headerheaderlog">
+    <img src="./fs.jpg" alt="Headerlogo" class="headerlogo_one" />
+    <div class="rowbook_a_table "  >
+        <img src="./menu.webp" class="toggler"  alt="toggler" (click)="toggleMenu()">
+        
+        <ul class="rowhome da" [class.show]="isMenuVisible" (mouseenter)="keepMenuOpen()" (mouseleave)="hideMenu()">
+          <li>
+            <a routerLink="/Home" routerLinkActive="active">
+              <p class="home ui heading size-textxs" >Home</p>
+            </a>
+          </li>
+          <li>
+            <a  routerLink="/About" routerLinkActive="active">
+              <p class="home ui heading size-textxs">About</p>
+            </a>
+          </li>
+          <li>
+            <a  routerLink="menu" routerLinkActive="active">
+              <p class="menu ui heading size-textxs">Menu</p>
+            </a>
+          </li>
+          <li>
+            <a  routerLink="Contact" routerLinkActive="active">
+  
+              <p class="home ui heading size-textxs">Contact</p>
+            </a>
+          </li>
+        </ul>
+        <div class="da">
+        <a  routerLink="Book A Table" routerLinkActive="active" (mouseleave)="hideMenu()">
+  
+        <button  class="flex-row-center-center book_a_table" (mouseenter)="keepMenuOpen()" [class.show]="isMenuVisible">Book A Table</button>
+      </a>
+      </div>
+      </div>
+      <div>
+        <a routerLink="/register" (mouseenter)="keepMenuOpen()" [class.show]="isMenuVisible" class="LOGIN" *ngIf="!email" routerLinkActive="active">
+          <img src="sign.png" alt="" class="dasss">
+          <p class="DAD">Sign in</p>
+        </a>
+        
+        <a routerLink="/login" (mouseenter)="keepMenuOpen()" [class.show]="isMenuVisible" (click)="logout()" *ngIf="email && !isAdmin" class="LOGIN">
+          <img src="sign.png" alt="" class="dasss">
+          <p class="DAD">Log out</p>
+        </a>
+      
+        <a routerLink="/admin-login" (mouseenter)="keepMenuOpen()" [class.show]="isMenuVisible" (click)="logoutAdmin()" *ngIf="isAdmin" class="LOGIN">
+          <img src="sign.png" alt="" class="dasss">
+          <p class="DAD">Log out</p>
+        </a>
+      </div>
+  
+    </header>
+  </div>
+  

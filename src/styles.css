@@ -1,0 +1,170 @@
+*{
+    margin: 0%;
+    padding: 0;
+}
+
+
+:root {
+    --amber_300: #fdc55e;
+    --amber_500: #ffbd19;
+    --black_900: #0c0c0c;
+    --black_900_01: #000000;
+    --black_900_14: #00000014;
+    --deep_orange_300: #fc9153;
+    --deep_orange_a400: #ff3008;
+    --gray_100: #f8f8f6;
+    --gray_900: #191919;
+    --gray_900_01: #2b2e23;
+    --green_600: #43b02a;
+    --green_a700: #05c167;
+    --orange_200: #fdce77;
+    --orange_600: #ff8200;
+    --pink_600: #d70f64;
+    --red_400: #f65f5f;
+    --red_400_00: #f5474800;
+    --red_400_01: #f54748;
+    --red_500: #f63440;
+    --red_500_01: #ff3030;
+    --teal_a700: #00ccbc;
+    --white_a700: #ffffff;
+    --white_a700_00: #ffffff00;
+    --white_a700_90: #ffffff90;
+    --white_a700_cc: #ffffffcc;
+  
+    --shadow-xs: 0 2.98px 59px 0 #00000014;
+  
+    --radius-xs: 1px;
+    --radius-sm: 12px;
+    --radius-md: 16px;
+    --radius-lg: 20px;
+    --radius-xl: 22px;
+    --radius-2xl: 24px;
+    --radius-3xl: 30px;
+    --radius-4xl: 98px;
+    --radius-5xl: 126px;
+  
+    --space-xs: 6px;
+    --space-sm: 8px;
+    --space-md: 10px;
+    --space-lg: 32px;
+  
+      --amber_300: #fdc55e;
+      --amber_300_19: #fdc55e19;
+      --black_900: #0c0c0c;
+      --blue_50: #dbeafe;
+      --gray_100: #f8f8f6;
+      --gray_800: #414536;
+      --gray_800_01: #474747;
+      --gray_900: #2b2e23;
+      --light_green_100: #dbdfd0;
+      --light_green_100_b2: #dbdfd0b2;
+      --orange_200: #fdce77;
+      --red_400: #f65f5f;
+      --red_400_01: #f54748;
+      --red_400_0f: #f547480f;
+      --red_800: #ad343e;
+      --white_a700: #ffffff;
+      --white_a700_19: #ffffff19;
+    
+      --radius-xs: 8px;
+      --radius-sm: 12px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-xl: 34px;
+      --radius-2xl: 52px;
+    
+      --space-xs: 2px;
+      --space-sm: 14px;
+      --space-md: 20px;
+      --space-lg: 24px;
+      --space-xl: 30px;
+      --space-2xl: 32px;
+      --space-3xl: 34px;
+      --space-4xl: 46px;
+      --space-5xl: 86px;    
+        --amber_300: #fdc55e;
+        --black_900: #0c0c0c;
+        --black_900_14: #00000014;
+        --gray_600: #727865;
+        --gray_900: #2b2e23;
+        --light_green_100: #dbdfd0;
+        --orange_200: #fdce77;
+        --red_400: #f54748;
+        --red_800: #ad343e;
+        --white_a700: #ffffff;
+      
+        --shadow-xs: 0 2.98px 59px 0 #00000014;
+      
+        --radius-xs: 16px;
+        --radius-sm: 24px;
+        --radius-md: 30px;
+        --radius-lg: 32px;
+      
+        --space-xs: 8px;
+        --space-sm: 24px;
+    
+  --amber_300: #fdc55e;
+    --black_900: #0c0c0c;
+    --black_900_14: #00000014;
+    --gray_600: #727865;
+    --gray_900: #2b2e23;
+    --light_green_100: #dbdfd0;
+    --red_400: #f54748;
+    --red_800: #ad343e;
+    --white_a700: #ffffff;
+    
+    --shadow-xs: 0 2.98px 59px 0 #00000014;
+    
+    --radius-xs: 16px;
+    --radius-sm: 24px;
+    --radius-md: 30px;
+    --radius-lg: 32px;
+    
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    
+    --amber_300: #fdc55e;
+    --amber_500: #ffbd19;
+    --black_900: #0c0c0c;
+    --black_900_01: #000000;
+    --black_900_14: #00000014;
+    --deep_orange_300: #fc9153;
+    --deep_orange_a400: #ff3008;
+    --gray_100: #f8f8f6;
+    --gray_900: #191919;
+    --gray_900_01: #2b2e23;
+    --green_600: #43b02a;
+    --green_a700: #05c167;
+    --orange_200: #fdce77;
+    --orange_600: #ff8200;
+    --pink_600: #d70f64;
+    --red_400: #f65f5f;
+    --red_400_00: #f5474800;
+    --red_400_01: #f54748;
+    --red_500: #f63440;
+    --red_500_01: #ff3030;
+    --teal_a700: #00ccbc;
+    --white_a700: #ffffff;
+    --white_a700_00: #ffffff00;
+    --white_a700_90: #ffffff90;
+    --white_a700_cc: #ffffffcc;
+  
+    --shadow-xs: 0 2.98px 59px 0 #00000014;
+  
+    --radius-xs: 1px;
+    --radius-sm: 12px;
+    --radius-md: 16px;
+    --radius-lg: 20px;
+    --radius-xl: 22px;
+    --radius-2xl: 24px;
+    --radius-3xl: 30px;
+    --radius-4xl: 98px;
+    --radius-5xl: 126px;
+  
+    --space-xs: 6px;
+    --space-sm: 8px;
+    --space-md: 10px;
+    --space-lg: 32px;
+}
+  

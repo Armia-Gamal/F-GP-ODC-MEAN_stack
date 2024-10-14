@@ -1,0 +1,86 @@
+<div class="e3">
+  <div class="newscreenbody">
+    <div class="columnmenuthat">
+      <h1 class="menuthat ui heading size-headings">
+        <span class="menuthat-span"> Menu</span>
+        <span class="menuthat-span-1"> &nbsp;that&nbsp;</span>
+        <span class="menuthat-span-2"> always</span>
+        <span class="menuthat-span-1"> &nbsp;make you fall in&nbsp;</span>
+        <span class="menuthat-span"> love</span>
+      </h1>
+    </div>  
+    <div class="gridprice">
+      <div *ngFor="let product of productsArray; trackBy: trackByFn">
+        <div class="column_one">
+          <div class="columnorder_now">
+            <div class="column">
+              <div class="columnprice columnprice_border">
+                <div class="stackprice">
+                  <img [src]="product.strCategoryThumb" alt="{{product.strCategory}}" class="image" />
+                  <h2 class="price ui heading size-texts">{{product.price}} $</h2>
+                </div>
+              </div>
+              <div class="columnkebab">
+                <div class="row_one">
+                  <img src="./img_grid_red_400.png" alt="Image" class="image_one" />
+                  <div class="row-1">
+                    <img src="./img_star_7.svg" alt="Image" class="image_two" />
+                    <h3 class="fortyfive ui heading size-texts">({{product.rate}})</h3>
+                  </div>
+                </div>
+                <h4 class="kebab ui heading size-headingxs">{{product.strCategory}}</h4>
+                <h6 class="loremipsumis ui heading size-textxs">{{product.strCategoryDescription}}</h6>
+              </div>
+            </div>
+            <input class="cc ui heading size-texts" type="number" [(ngModel)]="product.quantity" min="1" placeholder="Number of orders" />
+            <button class="flex-row-center-center order_now" (click)="orderProduct(product)">Order Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="rowyoucanorder">
+        <div class="title">
+          <h2 class="youcanorder ui heading size-texts">You can order through apps</h2>
+          <h3 class="loremipsum ui heading size-textxs">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit enim bibendum sed et aliquet aliquet risus tempor
+            semper.
+          </h3>
+        </div>
+        <div class="logo">
+          <div class="one">
+            <img src="./img_settings.svg" alt="Settings" class="settings_one" />
+            <img src="./img_settings_green_a700.svg" alt="Settings" class="settings_one" />
+          </div>
+          <div class="one">
+            <img src="./img_vector.svg" alt="Settings" class="settings_one" />
+          </div>
+          <div class="one">
+            <img src="./img_vector_black_900_01.svg" alt="Settings" class="settings_one" />
+          </div>
+          <div class="one">
+            <img src="./img_vector_deep_orange_a400.svg" alt="Settings" class="settings_one" />
+          </div>
+          <div class="one">
+            <img src="./img_group.svg" alt="Settings" class="settings_one" />
+          </div>
+          <div class="one">
+            <img src="./img_vector_teal_a700.svg" alt="Settings" class="settings_one" />
+          </div>
+          <div class="one">
+            <img src="./img_favorite.svg" alt="Settings" class="settings_one" />
+            <img src="./img_vector_green_600.svg" alt="Settings" class="settings_one" />
+          </div>
+          <div class="one">
+            <img src="./img_group_39980.svg" alt="Settings" class="settings_one" />
+          </div>
+          <div class="one">
+            <img src="./img_contrast.svg" alt="Settings" class="settings_one" />
+            <img src="./img_settings_gray_900_01.svg" alt="Settings" class="settings_one" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
